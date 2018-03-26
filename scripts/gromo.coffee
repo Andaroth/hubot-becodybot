@@ -36,26 +36,31 @@ module.exports = (robot) ->
   }
   output = {
     "gromo":[
-        "Hubot est très triste de t'entendre parler comme ça petit sacrichenapan !",
-        "Watch your language !",
-        "Attention, tu vas finir dans une poubelle si tu parles comme une ordure !",
-        "On ne dit pas ça !",
-        "Rappel, tu es en formation, pas à la foire à la saucisse de Mulhouse !"
-      ],
+      "Hubot est très triste de t'entendre parler comme ça petit sacrichenapan !",
+      "Watch your language !",
+      "Attention, tu vas finir dans une poubelle si tu parles comme une ordure !",
+      "On ne dit pas ça !",
+      "Rappel, tu es en formation, pas à la foire à la saucisse de Mulhouse !"
+    ], # gromo end
     "uwelcome":[
       "De rien !",
       "Avec plaisir ;)",
       "Pour vous servir !",
       "C'est gratuit ! :)"
-    ],
+    ], # u welcome end
     "joke":[
       "Tu m'as bien regardé ? Tu m'as pris pour Siri ou c'est comment ?",
       "La blague c'est que tu sois occupé de jouer avec ce bot au lieu de bosser !",
       "Pinces-me et Retourne-travailler sont sur un bâteau, Pinces-me tombe dans l'eau, qui reste-t-il ?"
-    ],
-    "retar":"Si tu es en retard, n'oublie pas de prévenir par mail admin@becode.org ainsi que tes deux formateurs",
-    "late":"If you are late, don’t forget to warn admin@becode.org and your 2 coaches by email.",
-    "meteo":"https://www.google.be/search?newwindow=1&ei=_fa4Wu3GINO4jAOJuZDoAQ&q=weather+forecast+near+you&oq=weather+forecast+near+you",
+    ], # joke end
+    "badge":[
+      "claim":"https://inside.becode.org/badges/"
+    ], # badge end
+    "repo":[
+      "becode":"https://github.com/becodeorg/",
+      "veille":"https://github.com/becodeorg/la-veille",
+      "axel":"https://github.com/Andaroth/?tab=repositories"
+    ], # repo end
     "mail":{
       "admin":"admin@becode.org",
       "alex":"alexandre@becode.org",
@@ -69,7 +74,13 @@ module.exports = (robot) ->
 Tél: +32 2 435 23 00
 h.kahya@bruxellesformation.brussels
 "
-    } # mail end
+    }, # mail end
+    #other 
+    "wifi":"The WiFi password for BC_HUB is `InCodeWeTrust!`",
+    "retar":"Si tu es en retard, n'oublie pas de prévenir par mail admin@becode.org ainsi que tes deux formateurs",
+    "late":"If you are late, don’t forget to warn admin@becode.org and your 2 coaches by email.",
+    "meteo":"https://www.google.be/search?newwindow=1&ei=_fa4Wu3GINO4jAOJuZDoAQ&q=weather+forecast+near+you&oq=weather+forecast+near+you",
+    "spotify":"https://open.spotify.com/user/1112523762/playlist/2QJt6MnyK1AHK0H2kzfioO?si=hkyqdQ6gRe-C7-93E2cVTg"
   } # res end
 
   # gromo
@@ -132,7 +143,16 @@ h.kahya@bruxellesformation.brussels
   robot.hear /bxf/i, (res) -> res.send output.mail.bxf
   robot.hear /bruxelles-formation/i, (res) -> res.send output.mail.bxf
   robot.hear /bruxelles formation/i, (res) -> res.send output.mail.bxf
+  #repos
+  robot.hear /repo veille/i, (res) -> res.send output.repo.veille
+  robot.hear /repo de la veille/i, (res) -> res.send output.repo.veille
+  robot.hear /repo axel/i, (res) -> res.send output.repo.axel
+  robot.hear /repo d'axel/i, (res) -> res.send output.repo.axel
+  robot.hear /repo de axel/i, (res) -> res.send output.repo.axel
+  #badges
+  robot.hear /badge claim/i, (res) -> res.send output.mail.claim
   #other
+  robot.hear /spotify/, (res) -> res.send output.spotify
   robot.hear /joke/, (res) -> res.send res.random output.joke
   robot.hear /blague/, (res) -> res.send res.random output.joke
   robot.hear /meteo/i, (res) -> res.send output.meteo
