@@ -37,6 +37,16 @@ h.kahya@bruxellesformation.brussels
     "La blague c'est quand t'es occupé de tester ce bot au lieu de bosser !",
     "Pinces-me et Retourne-travailler sont sur un bâteau, Pinces-me tombe dans l'eau, qui reste-t-il ?"
   ]
+  mail = [
+    "admin":"admin@becode.org",
+    "alex":"alexandre@becode.org",
+    "ber":"bertrand@becode.org"
+  ]
+  robot.hear 
+    /mail alexandre/i, 
+    /mail de alexandre/i, 
+    /mail d'alexandre/i, 
+  (res) -> res.send mail.alex
 
   robot.hear /joke/, (res) -> res.send res.random jokeres
   robot.hear /blague/, (res) -> res.send res.random jokeres
