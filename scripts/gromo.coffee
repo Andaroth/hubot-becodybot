@@ -21,6 +21,9 @@ module.exports = (robot) ->
   robot.hear gromo, (res) -> 
     res.send "Ne sois pas si vulgaire petit sacrichenapan !"
 
+  robot.hear /Bonjour @hubot/i, (res) ->
+    res.send "Bonjour toi \\^-^"
+
   robot.hear /bot test/i, (res) ->
     res.send "@team On m'a demandé de faire un bot qui dit erreur... et ça marche !!"
 
