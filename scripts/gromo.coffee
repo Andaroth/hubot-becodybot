@@ -24,11 +24,12 @@ Tél: +32 2 435 23 00
 h.kahya@bruxellesformation.brussels
 "
   meteores = "open link to https://www.google.be/search?newwindow=1&ei=_fa4Wu3GINO4jAOJuZDoAQ&q=weather+forecast+near+you&oq=weather+forecast+near+you"
-  opendoores = "@here Quelqu'un peut-il ouvrir la porte en bas ?"
+  opendoores = "Où est ton badge ?"
   robot.hear /m'ouvrir la porte/i, (res) -> res.send opendoores
 
-  robot.hear /sens de la vie/i, (res) -> res.send "La réponse est 42"
+  robot.hear /sens de la vie/i, (res) -> res.send "La réponse est Axel Fiolle"
 
+  robot.hear /caca/i, (res) -> res.send res.random gromores
   robot.hear /putain/i, (res) -> res.send res.random gromores
   robot.hear /putin/i, (res) -> res.send "Était-ce une vulgarité ou juste le nom du président de Russie ?"
   robot.hear /merd/i, (res) -> res.send res.random gromores
