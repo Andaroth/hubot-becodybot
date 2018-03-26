@@ -5,6 +5,7 @@
   "author": "Andaroth <ax.fiolle@gmail.com>",
   "description": "Âme de BeCode",
   "dependencies": {
+    "coffee-script": "^1.12.6",
     "hubot": "^2.19.0",
     "hubot-diagnostics": "0.0.2",
     "hubot-google-images": "^0.2.7",
@@ -20,6 +21,6 @@
     "hubot-shipit": "^0.2.1"
   },
   "engines": {
-    "node": "0.10.x"
+    "node": "^8.7.0"
   }
 }
