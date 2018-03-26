@@ -22,7 +22,7 @@ env HUBOT_RYVER_JOIN_FORUMS='no'
 start on filesystem or runlevel [2345]
 stop on runlevel [!2345]
 		
-chdir "C:\hubot-dorothy\"
+chdir "C:\hubot-dorothy\\"
 		
 #Automatically Respawn:
 respawn
