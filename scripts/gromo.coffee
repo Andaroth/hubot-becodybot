@@ -11,12 +11,20 @@
 module.exports = (robot) ->
 
   gromores = "Hubot est très triste de t'entendre parler comme ça petit sacrichenapan !"
+  retares = "Si tu es en retard, n'oublie pas de prévenir par mail admin@becode.org ainsi que tes deux formateurs"
+  lateres = "If you are late, don’t forget to warn admin@becode.org and your 2 coaches by email."
+  bruforma = "Hakim Kahya | Assistant administratif (accueil)
+Tél: +32 2 435 23 00
+h.kahya@bruxellesformation.brussels
+"
+  meteores = "open link to https://www.google.be/search?newwindow=1&ei=_fa4Wu3GINO4jAOJuZDoAQ&q=weather+forecast+near+you&oq=weather+forecast+near+you"
 
   robot.hear /putain/i, (res) -> res.send gromores
   robot.hear /putin/i, (res) -> res.send "Était-ce une vulgarité ou juste le nom du président de Russie ?"
   robot.hear /merd/i, (res) -> res.send gromores
   robot.hear /chier/i, (res) -> res.send gromores
-  robot.hear /con/i, (res) -> res.send gromores
+  robot.hear /con/, (res) -> res.send gromores
+  robot.hear /conne/, (res) -> res.send gromores
   robot.hear /bordel/i, (res) -> res.send gromores
   robot.hear /connard/i, (res) -> res.send gromores
   robot.hear /enfoiré/i, (res) -> res.send gromores
@@ -26,11 +34,22 @@ module.exports = (robot) ->
   robot.hear /encul/i, (res) -> res.send gromores
   robot.hear /bitch/i, (res) -> res.send gromores
   robot.hear /pute/i, (res) -> res.send gromores
-  
   robot.hear /bâtar/i, (res) -> res.send gromores
   robot.hear /batar/i, (res) -> res.send gromores
+  
+  # late
+  robot.hear /en retar/i, (res) -> res.send retares
+  robot.hear /mon retar/i, (res) -> res.send retares
+  # late in english
+  robot.hear /m late/i, (res) -> res.send lateres
+  robot.hear /I'll be late/i, (res) -> res.send lateres
+  robot.hear /I will be late/i, (res) -> res.send lateres
 
-  robot.hear /en retar/i, (res) -> res.send "Si tu es en retard tu mail admin@becode.org ainsi que tes deux formateurs"
+  robot.hear /meteo/i, (res) -> res.send meteores
+  robot.hear /quel temps fait/i, (res) -> res.send meteores
+
+  robot.hear /bxf/i, (res) -> res.send bruforma
+  robot.hear /bruxelles-formation/i, (res) -> res.send bruforma
 
   robot.hear /ton num/i, (res) -> res.send "On échange pas les nums sur Ryver, allez en privé !"
   robot.hear /ton mot de pas/i, (res) -> res.send "On ne donne pas de mots passe !"
