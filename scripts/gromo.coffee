@@ -43,10 +43,10 @@ h.kahya@bruxellesformation.brussels
     "ber":"bertrand@becode.org"
   ]
   robot.hear 
-    /mail alexandre/i, 
-    /mail de alexandre/i, 
-    /mail d'alexandre/i, 
-  (res) -> res.send mail.alex
+  /mail alexandre/i, 
+  /mail de alexandre/i, 
+  /mail d'alexandre/i, 
+    (res) -> res.send mail.alex
 
   robot.hear /joke/, (res) -> res.send res.random jokeres
   robot.hear /blague/, (res) -> res.send res.random jokeres
