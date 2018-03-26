@@ -30,6 +30,8 @@ module.exports = (robot) ->
   robot.hear /bâtar/i, (res) -> res.send gromores
   robot.hear /batar/i, (res) -> res.send gromores
 
+  robot.hear /en retar/i, (res) -> res.send "Si tu es en retard tu mail admin@becode.org ainsi que tes deux formateurs"
+
   robot.hear /ton num/i, (res) -> res.send "On échange pas les nums sur Ryver, allez en privé !"
   robot.hear /ton mot de pas/i, (res) -> res.send "On ne donne pas de mots passe !"
   robot.hear /help/i, (res) -> res.send "Bonjour, je suis l'aide. Vous vous sentez mieux maintenant ?"
