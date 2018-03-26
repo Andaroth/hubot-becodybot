@@ -18,7 +18,7 @@ module.exports = (robot) ->
     'bordel'
   ]
   
-  robot.hear gromo, (res) -> 
+  robot.hear /gromo/i, (res) -> 
     res.send "Ne sois pas si vulgaire petit sacrichenapan !"
 
   robot.hear /Bonjour @hubot/i, (res) ->
