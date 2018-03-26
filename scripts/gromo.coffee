@@ -27,6 +27,8 @@ h.kahya@bruxellesformation.brussels
   opendoores = "@here Quelqu'un peut-il ouvrir la porte en bas ?"
   robot.hear /m'ouvrir la porte/i, (res) -> res.send opendoores
 
+  robot.hear /sens de la vie/i, (res) -> res.send "La réponse est 42"
+
   robot.hear /putain/i, (res) -> res.send res.random gromores
   robot.hear /putin/i, (res) -> res.send "Était-ce une vulgarité ou juste le nom du président de Russie ?"
   robot.hear /merd/i, (res) -> res.send res.random gromores
@@ -100,7 +102,7 @@ h.kahya@bruxellesformation.brussels
     res.send "#{res.message.text}? That's a Paddlin'"
   
   
-  enterReplies = ['Hi', 'Target Acquired', 'Firing', 'Hello friend.', 'Gotcha', 'I see you']
+  enterReplies = ['Bonjour', 'Cible repérée', 'In flames !', 'Salut ami.', 'Yep', 'Je te vois']
   leaveReplies = ['Are you still there?', 'Target lost', 'Searching']
   
   robot.enter (res) ->
