@@ -1,6 +1,6 @@
 {
   "name": "Dorothy",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "author": "Andaroth <ax.fiolle@gmail.com>",
   "description": "Âme de BeCode",
@@ -19,6 +19,12 @@
     "hubot-ryver": "^0.1.3",
     "hubot-scripts": "^2.17.2",
     "hubot-shipit": "^0.2.1",
-    "node": "^9.9.0"
+    "node": "^8.7.0"
+  },
+  "scripts": {
+    "start": "./bin/hubot"
+  },
+  "engines": {
+    "node": "^8.7.0"
   }
 }
