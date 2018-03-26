@@ -37,7 +37,7 @@ module.exports = (robot) ->
   output = {
     "gromo":[
       "Hubot est très triste de t'entendre parler comme ça petit sacrichenapan !",
-      "Watch your language !",
+      "Watch your language : this is a professional environment.",
       "Attention, tu vas finir dans une poubelle si tu parles comme une ordure !",
       "On ne dit pas ça !",
       "Rappel, tu es en formation, pas à la foire à la saucisse de Mulhouse !"
