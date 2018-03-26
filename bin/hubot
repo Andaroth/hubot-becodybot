@@ -16,7 +16,7 @@ env HUBOT_NAME='hubot'
 env HUBOT_LOG_LEVEL='debug'
 env HUBOT_RYVER_USERNAME='@hubot'
 env HUBOT_RYVER_PASSWORD='Y0L000Yeah!'
-env HUBOT_RYVER_APP_URL='becode.ryver.com
+env HUBOT_RYVER_APP_URL='becode.ryver.com'
 env HUBOT_RYVER_JOIN_FORUMS='no'
 
 start on filesystem or runlevel [2345]
