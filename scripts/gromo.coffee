@@ -14,7 +14,8 @@ module.exports = (robot) ->
     "Hubot est très triste de t'entendre parler comme ça petit sacrichenapan !",
     "Watch your language !",
     "Attention, tu vas finir dans une poubelle si tu parles comme une ordure !",
-    "On ne dit pas ça !"
+    "On ne dit pas ça !",
+    "Rappel, tu es en formation, pas à la foire à la saucisse de Mulhouse"
   ]
   retares = "Si tu es en retard, n'oublie pas de prévenir par mail admin@becode.org ainsi que tes deux formateurs"
   lateres = "If you are late, don’t forget to warn admin@becode.org and your 2 coaches by email."
@@ -23,6 +24,8 @@ Tél: +32 2 435 23 00
 h.kahya@bruxellesformation.brussels
 "
   meteores = "open link to https://www.google.be/search?newwindow=1&ei=_fa4Wu3GINO4jAOJuZDoAQ&q=weather+forecast+near+you&oq=weather+forecast+near+you"
+  opendoores = "@here Quelqu'un peut-il ouvrir la porte en bas ?"
+  robot.hear /m'ouvrir la porte/i, (res) -> res.send opendoores
 
   robot.hear /putain/i, (res) -> res.send res.random gromores
   robot.hear /putin/i, (res) -> res.send "Était-ce une vulgarité ou juste le nom du président de Russie ?"
@@ -42,6 +45,8 @@ h.kahya@bruxellesformation.brussels
   robot.hear /bâtar/i, (res) -> res.send res.random gromores
   robot.hear /batar/i, (res) -> res.send res.random gromores
 
+  robot.hear /kikoo/i, (res -> res.send "Tu dis encore Kikoo à ton âge toi ?"
+
   robot.hear /ta gueule/i, (res) -> res.send res.random gromores
   robot.hear /taggle/i, (res) -> res.send res.random gromores
   robot.hear /fils de/i, (res) -> res.send res.random gromores
@@ -59,13 +64,14 @@ h.kahya@bruxellesformation.brussels
 
   robot.hear /bxf/i, (res) -> res.send bruforma
   robot.hear /bruxelles-formation/i, (res) -> res.send bruforma
+  robot.hear /bruxelles formation/i, (res) -> res.send bruforma
 
   robot.hear /ton num/i, (res) -> res.send "On échange pas les nums sur Ryver, allez en privé !"
   robot.hear /ton mot de pas/i, (res) -> res.send "On ne donne pas de mots passe !"
   robot.hear /help/i, (res) -> res.send "Bonjour, je suis l'aide. Vous vous sentez mieux maintenant ?"
 
   robot.hear /@hubot/i, (res) ->
-    res.send "C'est moué Hubot \\^-^"
+    res.send "PM only"
 
   robot.hear /bot test/i, (res) ->
     res.send "On m'a demandé de faire un bot qui dit erreur... et ça marche !!"
