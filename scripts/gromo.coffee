@@ -37,7 +37,7 @@ h.kahya@bruxellesformation.brussels
     "La blague c'est quand t'es occupé de tester ce bot au lieu de bosser !",
     "Pinces-me et Retourne-travailler sont sur un bâteau, Pinces-me tombe dans l'eau, qui reste-t-il ?"
   ]
-  mail = [
+  mail = {
     "admin":"admin@becode.org",
     "alex":"alexandre@becode.org",
     "ber":"bertrand@becode.org",
@@ -45,21 +45,22 @@ h.kahya@bruxellesformation.brussels
     "ted":"teddy@becode.org",
     "eric":"eric@becode.org",
     "juan":"juan@becode.org",
-    "cedric":"cedrid@becode.org",
-  ]
+    "cedric":"cedrid@becode.org"
+  }
+
   robot.hear /mail admin/i, (res) -> res.send mail.admin
   robot.hear /mail de admin/i, (res) -> res.send mail.admin
   robot.hear /mail d'admin/i, (res) -> res.send mail.admin
-  robot.hear /mail alexandre/i, (res) -> res.send mail.alex
-  robot.hear /mail de alexandre/i, (res) -> res.send mail.alex
-  robot.hear /mail d'alexandre/i, (res) -> res.send mail.alex
-  robot.hear /mail emily/i, (res) -> res.send mail.emi
-  robot.hear /mail de emily/i, (res) -> res.send mail.emi
-  robot.hear /mail d'emily/i, (res) -> res.send mail.emi
-  robot.hear /mail bertrand/i, (res) -> res.send mail.ber
-  robot.hear /mail de bertrand/i, (res) -> res.send mail.ber
-  robot.hear /mail teddy/i, (res) -> res.send mail.ted
-  robot.hear /mail de teddy/i, (res) -> res.send mail.ted
+  robot.hear /mail alex/i, (res) -> res.send mail.alex
+  robot.hear /mail de alex/i, (res) -> res.send mail.alex
+  robot.hear /mail d'alex/i, (res) -> res.send mail.alex
+  robot.hear /mail emi/i, (res) -> res.send mail.emi
+  robot.hear /mail de emi/i, (res) -> res.send mail.emi
+  robot.hear /mail d'emi/i, (res) -> res.send mail.emi
+  robot.hear /mail ber/i, (res) -> res.send mail.ber
+  robot.hear /mail de ber/i, (res) -> res.send mail.ber
+  robot.hear /mail ted/i, (res) -> res.send mail.ted
+  robot.hear /mail de ted/i, (res) -> res.send mail.ted
   robot.hear /mail eric/i, (res) -> res.send mail.eric
   robot.hear /mail de eric/i, (res) -> res.send mail.eric
   robot.hear /mail d'eric/i, (res) -> res.send mail.eric
