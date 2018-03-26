@@ -41,6 +41,10 @@ h.kahya@bruxellesformation.brussels
   robot.hear /pute/i, (res) -> res.random gromores
   robot.hear /bâtar/i, (res) -> res.random gromores
   robot.hear /batar/i, (res) -> res.random gromores
+
+  robot.hear /ta gueule/i, (res) -> res.random gromores
+  robot.hear /taggle/i, (res) -> res.random gromores
+  robot.hear /fils de/i, (res) -> res.random gromores
   
   # late
   robot.hear /en retar/i, (res) -> res.send retares
