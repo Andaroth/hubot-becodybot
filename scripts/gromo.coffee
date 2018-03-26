@@ -37,23 +37,38 @@ h.kahya@bruxellesformation.brussels
     "La blague c'est quand t'es occupé de tester ce bot au lieu de bosser !",
     "Pinces-me et Retourne-travailler sont sur un bâteau, Pinces-me tombe dans l'eau, qui reste-t-il ?"
   ]
-  # mail = [
-  #   "admin":"admin@becode.org",
-  #   "alex":"alexandre@becode.org",
-  #   "ber":"bertrand@becode.org",
-  #   "emi":"emily@becode.org",
-  #   "teddy":"teddy@becode.org",
-  #   "juan":"juan@becode.org",
-  #   "cedric":"cedrid@becode.org",
-  # ]
-  # robot.hear /mail admin/i, (res) -> res.send mail.admin
-  # robot.hear /mail de admin/i, (res) -> res.send mail.admin
-  # robot.hear /mail d'admin/i, (res) -> res.send mail.admin
-  # robot.hear /mail alexandre/i, (res) -> res.send mail.alex
-  # robot.hear /mail de alexandre/i, (res) -> res.send mail.alex
-  # robot.hear /mail d'alexandre/i, (res) -> res.send mail.alex
-  # robot.hear /mail bertrand/i, (res) -> res.send mail.ber
-  # robot.hear /mail de bertrand/i, (res) -> res.send mail.ber
+  mail = [
+    "admin":"admin@becode.org",
+    "alex":"alexandre@becode.org",
+    "ber":"bertrand@becode.org",
+    "emi":"emily@becode.org",
+    "ted":"teddy@becode.org",
+    "eric":"eric@becode.org",
+    "juan":"juan@becode.org",
+    "cedric":"cedrid@becode.org",
+  ]
+  robot.hear /mail admin/i, (res) -> res.send mail.admin
+  robot.hear /mail de admin/i, (res) -> res.send mail.admin
+  robot.hear /mail d'admin/i, (res) -> res.send mail.admin
+  robot.hear /mail alexandre/i, (res) -> res.send mail.alex
+  robot.hear /mail de alexandre/i, (res) -> res.send mail.alex
+  robot.hear /mail d'alexandre/i, (res) -> res.send mail.alex
+  robot.hear /mail emily/i, (res) -> res.send mail.emi
+  robot.hear /mail de emily/i, (res) -> res.send mail.emi
+  robot.hear /mail d'emily/i, (res) -> res.send mail.emi
+  robot.hear /mail bertrand/i, (res) -> res.send mail.ber
+  robot.hear /mail de bertrand/i, (res) -> res.send mail.ber
+  robot.hear /mail teddy/i, (res) -> res.send mail.ted
+  robot.hear /mail de teddy/i, (res) -> res.send mail.ted
+  robot.hear /mail eric/i, (res) -> res.send mail.eric
+  robot.hear /mail de eric/i, (res) -> res.send mail.eric
+  robot.hear /mail d'eric/i, (res) -> res.send mail.eric
+  robot.hear /mail de juan/i, (res) -> res.send mail.juan
+  robot.hear /mail juan/i, (res) -> res.send mail.juan
+  robot.hear /mail cedric/i, (res) -> res.send mail.cedric
+  robot.hear /mail de cedric/i, (res) -> res.send mail.cedric
+  robot.hear /mail cédric/i, (res) -> res.send mail.cedric
+  robot.hear /mail de cédric/i, (res) -> res.send mail.cedric
 
   robot.hear /joke/, (res) -> res.send res.random jokeres
   robot.hear /blague/, (res) -> res.send res.random jokeres
