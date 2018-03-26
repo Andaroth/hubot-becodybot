@@ -8,7 +8,7 @@
 # exec node_modules/.bin/hubot --name "Dorothy" "$@"
 
 description "Hubot Ryver"
-#Assumes an installation at /var/www/hubot with permissions given to a www-data user
+#Assumes an installation at ~/app/hubot-dorothy with permissions given to a root user
 
 env PORT='5556'
 env HUBOT_IP='10.1.255.10'
@@ -28,4 +28,4 @@ chdir "~/app/hubot-dorothy"
 respawn
 respawn limit 10 5
 		
-exec su -c "./bin/hubot -l 'hubot' 2>&1 | logger -t hubot-ryver_service" www-data
+exec su -c "./bin/hubot -l 'hubot' 2>&1 | logger -t hubot-ryver_service" root
