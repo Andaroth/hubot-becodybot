@@ -33,8 +33,8 @@ h.kahya@bruxellesformation.brussels
   robot.hear /putin/i, (res) -> res.send "Était-ce une vulgarité ou juste le nom du président de Russie ?"
   robot.hear /merd/i, (res) -> res.send res.random gromores
   robot.hear /chier/i, (res) -> res.send res.random gromores
-  robot.hear /con/, (res) -> res.send res.random gromores
-  robot.hear /conne/, (res) -> res.send res.random gromores
+  robot.hear /con/i, (res) -> res.send res.random gromores
+  robot.hear /conne/i, (res) -> res.send res.random gromores
   robot.hear /bordel/i, (res) -> res.send res.random gromores
   robot.hear /connard/i, (res) -> res.send res.random gromores
   robot.hear /enfoiré/i, (res) -> res.send res.random gromores
@@ -46,13 +46,9 @@ h.kahya@bruxellesformation.brussels
   robot.hear /pute/i, (res) -> res.send res.random gromores
   robot.hear /bâtar/i, (res) -> res.send res.random gromores
   robot.hear /batar/i, (res) -> res.send res.random gromores
-
-  robot.hear /kikoo/i, (res -> res.send "Tu dis encore Kikoo à ton âge toi ?"
-
   robot.hear /ta gueule/i, (res) -> res.send res.random gromores
   robot.hear /taggle/i, (res) -> res.send res.random gromores
   robot.hear /fils de/i, (res) -> res.send res.random gromores
-  
   # late
   robot.hear /en retar/i, (res) -> res.send retares
   robot.hear /mon retar/i, (res) -> res.send retares
@@ -60,20 +56,14 @@ h.kahya@bruxellesformation.brussels
   robot.hear /m late/i, (res) -> res.send lateres
   robot.hear /ll be late/i, (res) -> res.send lateres
   robot.hear /I will be late/i, (res) -> res.send lateres
-
-  robot.hear /meteo/i, (res) -> res.send meteores
-  robot.hear /quel temps fait/i, (res) -> res.send meteores
-
+  #bxf
   robot.hear /bxf/i, (res) -> res.send bruforma
   robot.hear /bruxelles-formation/i, (res) -> res.send bruforma
   robot.hear /bruxelles formation/i, (res) -> res.send bruforma
-
-  robot.hear /ton num/i, (res) -> res.send "On échange pas les nums sur Ryver, allez en privé !"
-  robot.hear /ton mot de pas/i, (res) -> res.send "On ne donne pas de mots passe !"
+  #other
+  robot.hear /meteo/i, (res) -> res.send meteores
+  robot.hear /quel temps fait/i, (res) -> res.send meteores
+  robot.hear /kikoo/i, (res) -> res.send "Tu dis encore Kikoo à ton âge toi ?"
   robot.hear /help/i, (res) -> res.send "Bonjour, je suis l'aide. Vous vous sentez mieux maintenant ?"
-
-  robot.hear /@hubot/i, (res) ->
-    res.send "PM only"
-
-  robot.hear /bot test/i, (res) ->
-    res.send "On m'a demandé de faire un bot qui dit erreur... et ça marche !!"
+  robot.hear /@hubot/i, (res) -> res.send "PM only"
+  robot.hear /bot test/i, (res) -> res.send "Axel Fiolle dit : On m'a demandé de faire un bot qui dit erreur... et ça marche !!"
