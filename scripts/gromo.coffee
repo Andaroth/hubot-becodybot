@@ -13,18 +13,34 @@ module.exports = (robot) ->
   gromores = "Hubot est très triste de t'entendre parler comme ça petit sacrichenapan !"
 
   robot.hear /putain/i, (res) -> res.send gromores
-  robot.hear /merde/i, (res) -> res.send gromores
+  robot.hear /putin/i, (res) -> res.send "Était-ce une vulgarité ou juste le nom du président de Russie ?"
+  robot.hear /merd/i, (res) -> res.send gromores
   robot.hear /chier/i, (res) -> res.send gromores
   robot.hear /con/i, (res) -> res.send gromores
   robot.hear /bordel/i, (res) -> res.send gromores
   robot.hear /connard/i, (res) -> res.send gromores
   robot.hear /enfoiré/i, (res) -> res.send gromores
+  robot.hear /fuck/i, (res) -> res.send gromores
+  robot.hear /shit/i, (res) -> res.send gromores
+  robot.hear /bastard/i, (res) -> res.send gromores
+  robot.hear /encul/i, (res) -> res.send gromores
+  robot.hear /bitch/i, (res) -> res.send gromores
+  robot.hear /pute/i, (res) -> res.send gromores
+  
+  robot.hear /bâtar/i, (res) -> res.send gromores
+  robot.hear /batar/i, (res) -> res.send gromores
+
+  robot.hear /ton num/i, (res) -> res.send "On échange pas les nums sur Ryver, allez en privé !"
+  robot.hear /ton mot de pas/i, (res) -> res.send "On ne donne pas de mots passe !"
+  robot.hear /help/i, (res) -> res.send "Bonjour, je suis l'aide. Vous vous sentez mieux maintenant ?"
 
   robot.hear /@hubot/i, (res) ->
     res.send "C'est moué Hubot \\^-^"
 
   robot.hear /bot test/i, (res) ->
     res.send "On m'a demandé de faire un bot qui dit erreur... et ça marche !!"
+
+  robot.hear /Thomas Geenen/i, (res) -> res.send "Qui ?"
 
   robot.hear /badger/i, (res) ->
     res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
