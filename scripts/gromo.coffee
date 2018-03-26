@@ -38,8 +38,8 @@ h.kahya@bruxellesformation.brussels
     "Pinces-me et Retourne-travailler sont sur un bâteau, Pinces-me tombe dans l'eau, qui reste-t-il ?"
   ]
 
-  robot.hear /\/joke/, (res) res.send res.random jokeres
-  robot.hear /\/blague/, (res) res.send res.random jokeres
+  robot.hear /joke/, (res) res.send res.random jokeres
+  robot.hear /blague/, (res) res.send res.random jokeres
 
   robot.hear /m'ouvrir la porte/i, (res) -> res.send "Où est ton badge ?"
 
