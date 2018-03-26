@@ -15,7 +15,7 @@ module.exports = (robot) ->
     "Watch your language !",
     "Attention, tu vas finir dans une poubelle si tu parles comme une ordure !",
     "On ne dit pas ça !",
-    "Rappel, tu es en formation, pas à la foire à la saucisse de Mulhouse"
+    "Rappel, tu es en formation, pas à la foire à la saucisse de Mulhouse !"
   ]
   retares = "Si tu es en retard, n'oublie pas de prévenir par mail admin@becode.org ainsi que tes deux formateurs"
   lateres = "If you are late, don’t forget to warn admin@becode.org and your 2 coaches by email."
@@ -32,6 +32,15 @@ h.kahya@bruxellesformation.brussels
     "C'est gratuit ! :)"
   ]
 
+  jokeres = [
+    "Tu m'as bien regardé ? Tu m'as pris pour Siri ou c'est comment ?",
+    "La blague c'est quand t'es occupé de tester ce bot au lieu de bosser !",
+    "Pinces-me et Retourne-travailler sont sur un bâteau, Pinces-me tombe dans l'eau, qui reste-t-il ?"
+  ]
+
+  robot.hear /\/joke/, (res) res.send res.random jokeres
+  robot.hear /\/blague/, (res) res.send res.random jokeres
+
   robot.hear /m'ouvrir la porte/i, (res) -> res.send "Où est ton badge ?"
 
   robot.hear /Steve m'a-t-il aidé ?/i, (res) -> res.send "Steve est un lâcheur"
@@ -40,8 +49,8 @@ h.kahya@bruxellesformation.brussels
   robot.hear /sens de la vie/i, (res) -> res.send "La réponse est retourne travailler !"
 
   robot.hear /caca/i, (res) -> res.send res.random gromores
+  robot.hear /pipi/i, (res) -> res.send res.random gromores
   robot.hear /putain/i, (res) -> res.send res.random gromores
-  robot.hear /putin/i, (res) -> res.send "Était-ce une vulgarité ou juste le nom du président de Russie ?"
   robot.hear /merd/i, (res) -> res.send res.random gromores
   robot.hear /chier/i, (res) -> res.send res.random gromores
   robot.hear /con/i, (res) -> res.send res.random gromores
@@ -73,7 +82,9 @@ h.kahya@bruxellesformation.brussels
   robot.hear /bruxelles formation/i, (res) -> res.send bruforma
   #other
   robot.hear /meteo/i, (res) -> res.send meteores
+  robot.hear /météo/i, (res) -> res.send meteores
   robot.hear /quel temps fait/i, (res) -> res.send meteores
+  robot.hear /putin/i, (res) -> res.send "Était-ce une vulgarité ou juste le nom du président de Russie ?"
   robot.hear /kikoo/i, (res) -> res.send "Tu dis encore Kikoo à ton âge toi ?"
   robot.hear /help/i, (res) -> res.send "Bonjour, je suis l'aide. Vous vous sentez mieux maintenant ?"
   robot.hear /@hubot/i, (res) -> res.send "PM only"
