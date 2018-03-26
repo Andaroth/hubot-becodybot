@@ -37,16 +37,23 @@ h.kahya@bruxellesformation.brussels
     "La blague c'est quand t'es occupé de tester ce bot au lieu de bosser !",
     "Pinces-me et Retourne-travailler sont sur un bâteau, Pinces-me tombe dans l'eau, qui reste-t-il ?"
   ]
-  mail = [
-    "admin":"admin@becode.org",
-    "alex":"alexandre@becode.org",
-    "ber":"bertrand@becode.org"
-  ]
-  robot.hear 
-  /mail alexandre/i, 
-  /mail de alexandre/i, 
-  /mail d'alexandre/i, 
-    (res) -> res.send mail.alex
+  # mail = [
+  #   "admin":"admin@becode.org",
+  #   "alex":"alexandre@becode.org",
+  #   "ber":"bertrand@becode.org",
+  #   "emi":"emily@becode.org",
+  #   "teddy":"teddy@becode.org",
+  #   "juan":"juan@becode.org",
+  #   "cedric":"cedrid@becode.org",
+  # ]
+  # robot.hear /mail admin/i, (res) -> res.send mail.admin
+  # robot.hear /mail de admin/i, (res) -> res.send mail.admin
+  # robot.hear /mail d'admin/i, (res) -> res.send mail.admin
+  # robot.hear /mail alexandre/i, (res) -> res.send mail.alex
+  # robot.hear /mail de alexandre/i, (res) -> res.send mail.alex
+  # robot.hear /mail d'alexandre/i, (res) -> res.send mail.alex
+  # robot.hear /mail bertrand/i, (res) -> res.send mail.ber
+  # robot.hear /mail de bertrand/i, (res) -> res.send mail.ber
 
   robot.hear /joke/, (res) -> res.send res.random jokeres
   robot.hear /blague/, (res) -> res.send res.random jokeres
