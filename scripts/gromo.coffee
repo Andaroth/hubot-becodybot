@@ -10,7 +10,12 @@
 
 module.exports = (robot) ->
 
-  gromores = "Hubot est très triste de t'entendre parler comme ça petit sacrichenapan !"
+  gromores = [
+    "Hubot est très triste de t'entendre parler comme ça petit sacrichenapan !",
+    "Watch your language !",
+    "Attention, tu vas finir dans une poubelle si tu parles comme une ordure !",
+    "On ne dit pas ça !"
+  ]
   retares = "Si tu es en retard, n'oublie pas de prévenir par mail admin@becode.org ainsi que tes deux formateurs"
   lateres = "If you are late, don’t forget to warn admin@becode.org and your 2 coaches by email."
   bruforma = "Hakim Kahya | Assistant administratif (accueil)
@@ -19,23 +24,23 @@ h.kahya@bruxellesformation.brussels
 "
   meteores = "open link to https://www.google.be/search?newwindow=1&ei=_fa4Wu3GINO4jAOJuZDoAQ&q=weather+forecast+near+you&oq=weather+forecast+near+you"
 
-  robot.hear /putain/i, (res) -> res.send gromores
+  robot.hear /putain/i, (res) -> res.random gromores
   robot.hear /putin/i, (res) -> res.send "Était-ce une vulgarité ou juste le nom du président de Russie ?"
-  robot.hear /merd/i, (res) -> res.send gromores
-  robot.hear /chier/i, (res) -> res.send gromores
-  robot.hear /con/, (res) -> res.send gromores
-  robot.hear /conne/, (res) -> res.send gromores
-  robot.hear /bordel/i, (res) -> res.send gromores
-  robot.hear /connard/i, (res) -> res.send gromores
-  robot.hear /enfoiré/i, (res) -> res.send gromores
-  robot.hear /fuck/i, (res) -> res.send gromores
-  robot.hear /shit/i, (res) -> res.send gromores
-  robot.hear /bastard/i, (res) -> res.send gromores
-  robot.hear /encul/i, (res) -> res.send gromores
-  robot.hear /bitch/i, (res) -> res.send gromores
-  robot.hear /pute/i, (res) -> res.send gromores
-  robot.hear /bâtar/i, (res) -> res.send gromores
-  robot.hear /batar/i, (res) -> res.send gromores
+  robot.hear /merd/i, (res) -> res.random gromores
+  robot.hear /chier/i, (res) -> res.random gromores
+  robot.hear /con/, (res) -> res.random gromores
+  robot.hear /conne/, (res) -> res.random gromores
+  robot.hear /bordel/i, (res) -> res.random gromores
+  robot.hear /connard/i, (res) -> res.random gromores
+  robot.hear /enfoiré/i, (res) -> res.random gromores
+  robot.hear /fuck/i, (res) -> res.random gromores
+  robot.hear /shit/i, (res) -> res.random gromores
+  robot.hear /bastard/i, (res) -> res.random gromores
+  robot.hear /encul/i, (res) -> res.random gromores
+  robot.hear /bitch/i, (res) -> res.random gromores
+  robot.hear /pute/i, (res) -> res.random gromores
+  robot.hear /bâtar/i, (res) -> res.random gromores
+  robot.hear /batar/i, (res) -> res.random gromores
   
   # late
   robot.hear /en retar/i, (res) -> res.send retares
@@ -61,7 +66,7 @@ h.kahya@bruxellesformation.brussels
   robot.hear /bot test/i, (res) ->
     res.send "On m'a demandé de faire un bot qui dit erreur... et ça marche !!"
 
-  robot.hear /Thomas Geenen/i, (res) -> res.send "Qui ?"
+  # robot.hear /Thomas Geenen/i, (res) -> res.send "Qui ?"
 
   robot.hear /badger/i, (res) ->
     res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
