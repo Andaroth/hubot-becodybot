@@ -24,10 +24,18 @@ Tél: +32 2 435 23 00
 h.kahya@bruxellesformation.brussels
 "
   meteores = "open link to https://www.google.be/search?newwindow=1&ei=_fa4Wu3GINO4jAOJuZDoAQ&q=weather+forecast+near+you&oq=weather+forecast+near+you"
-  opendoores = "Où est ton badge ?"
-  robot.hear /m'ouvrir la porte/i, (res) -> res.send opendoores
+
+  uwelkom = [
+    "De rien !",
+    "Avec plaisir ;)",
+    "Pour vous servir !",
+    "C'est gratuit ! :)"
+  ]
+
+  robot.hear /m'ouvrir la porte/i, (res) -> res.send "Où est ton badge ?"
 
   robot.hear /Steve m'a-t-il aidé ?/i, (res) -> res.send "Steve est un lâcheur"
+  robot.hear /Merci Hubot/i, (res) -> res.send res.random uwelkom
 
   robot.hear /sens de la vie/i, (res) -> res.send "La réponse est retourne travailler !"
 
