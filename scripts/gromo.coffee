@@ -95,32 +95,35 @@ h.kahya@bruxellesformation.brussels
 # functions
 
   # gromo
-  # mapMe = table.gromo.in;
+  mapMe = table.gromo.in;
   # gromoFun = (i, res)
   # avert = (res) -> res.send res.random table.gromo.out
   # avert gromo for gromo in table.gromo.in
 
-  robot.hear /caca/i, (res) -> res.send res.random table.gromo.out
-  robot.hear /pipi/i, (res) -> res.send res.random table.gromo.out
-  robot.hear /putain/i, (res) -> res.send res.random table.gromo.out
-  robot.hear /merd/i, (res) -> res.send res.random table.gromo.out
-  robot.hear /chier/i, (res) -> res.send res.random table.gromo.out
-  robot.hear /con/i, (res) -> res.send res.random table.gromo.out
-  robot.hear /conne/i, (res) -> res.send res.random table.gromo.out
-  robot.hear /bordel/i, (res) -> res.send res.random table.gromo.out
-  robot.hear /connard/i, (res) -> res.send res.random table.gromo.out
-  robot.hear /enfoiré/i, (res) -> res.send res.random table.gromo.out
-  robot.hear /fuck/i, (res) -> res.send res.random table.gromo.out
-  robot.hear /shit/i, (res) -> res.send res.random table.gromo.out
-  robot.hear /bastard/i, (res) -> res.send res.random table.gromo.out
-  robot.hear /encul/i, (res) -> res.send res.random table.gromo.out
-  robot.hear /bitch/i, (res) -> res.send res.random table.gromo.out
-  robot.hear /pute/i, (res) -> res.send res.random table.gromo.out
-  robot.hear /bâtar/i, (res) -> res.send res.random table.gromo.out
-  robot.hear /batar/i, (res) -> res.send res.random table.gromo.out
-  robot.hear /ta gueule/i, (res) -> res.send res.random table.gromo.out
-  robot.hear /taggle/i, (res) -> res.send res.random table.gromo.out
-  robot.hear /fils de/i, (res) -> res.send res.random table.gromo.out
+  gromos = mapMe.map (gromo) -> gromo.in
+  robot.hear gromos, (res) -> res.send res.random.gromo.out
+
+  # robot.hear /caca/i, (res) -> res.send res.random table.gromo.out
+  # robot.hear /pipi/i, (res) -> res.send res.random table.gromo.out
+  # robot.hear /putain/i, (res) -> res.send res.random table.gromo.out
+  # robot.hear /merd/i, (res) -> res.send res.random table.gromo.out
+  # robot.hear /chier/i, (res) -> res.send res.random table.gromo.out
+  # robot.hear /con/i, (res) -> res.send res.random table.gromo.out
+  # robot.hear /conne/i, (res) -> res.send res.random table.gromo.out
+  # robot.hear /bordel/i, (res) -> res.send res.random table.gromo.out
+  # robot.hear /connard/i, (res) -> res.send res.random table.gromo.out
+  # robot.hear /enfoiré/i, (res) -> res.send res.random table.gromo.out
+  # robot.hear /fuck/i, (res) -> res.send res.random table.gromo.out
+  # robot.hear /shit/i, (res) -> res.send res.random table.gromo.out
+  # robot.hear /bastard/i, (res) -> res.send res.random table.gromo.out
+  # robot.hear /encul/i, (res) -> res.send res.random table.gromo.out
+  # robot.hear /bitch/i, (res) -> res.send res.random table.gromo.out
+  # robot.hear /pute/i, (res) -> res.send res.random table.gromo.out
+  # robot.hear /bâtar/i, (res) -> res.send res.random table.gromo.out
+  # robot.hear /batar/i, (res) -> res.send res.random table.gromo.out
+  # robot.hear /ta gueule/i, (res) -> res.send res.random table.gromo.out
+  # robot.hear /taggle/i, (res) -> res.send res.random table.gromo.out
+  # robot.hear /fils de/i, (res) -> res.send res.random table.gromo.out
   #mailist
   robot.hear /mail bru/i, (res) -> res.send table.mail.bxf
   robot.hear /mail de bru/i, (res) -> res.send table.mail.bxf
