@@ -10,22 +10,21 @@
 
 module.exports = (robot) ->
 
-  gromo = [
-    'putain',
-    'merde',
-    'chier',
-    'con',
-    'bordel'
-  ]
-  
-  robot.hear /gromo/i, (res) -> 
-    res.send "Ne sois pas si vulgaire petit sacrichenapan !"
+  gromores = "Hubot est très triste de t'entendre parler comme ça pertit sacrichenapan !"
 
-  robot.hear /Bonjour @hubot/i, (res) ->
-    res.send "Bonjour toi \\^-^"
+  robot.hear /putain/i, (res) -> res.send gromores
+  robot.hear /merde/i, (res) -> res.send gromores
+  robot.hear /chier/i, (res) -> res.send gromores
+  robot.hear /con/i, (res) -> res.send gromores
+  robot.hear /bordel/i, (res) -> res.send gromores
+  robot.hear /connard/i, (res) -> res.send gromores
+  robot.hear /enfoiré/i, (res) -> res.send gromores
+
+  robot.hear /@hubot/i, (res) ->
+    res.send "C'est moué Hubot \\^-^"
 
   robot.hear /bot test/i, (res) ->
-    res.send "@team On m'a demandé de faire un bot qui dit erreur... et ça marche !!"
+    res.send "On m'a demandé de faire un bot qui dit erreur... et ça marche !!"
 
   robot.hear /badger/i, (res) ->
     res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
