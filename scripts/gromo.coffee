@@ -38,6 +38,7 @@ h.kahya@bruxellesformation.brussels
     "Pinces-me et Retourne-travailler sont sur un bâteau, Pinces-me tombe dans l'eau, qui reste-t-il ?"
   ]
   mail = {
+    "bxf":"h.kahya@bruxellesformation.brussels",
     "admin":"admin@becode.org",
     "alex":"alexandre@becode.org",
     "ber":"bertrand@becode.org",
@@ -45,9 +46,13 @@ h.kahya@bruxellesformation.brussels
     "ted":"teddy@becode.org",
     "eric":"eric@becode.org",
     "juan":"juan@becode.org",
-    "cedric":"cedrid@becode.org"
+    "cedric":"cedric@becode.org"
   }
-
+  robot.hear /mail bxf/i, (res) -> res.send mail.bxf
+  robot.hear /mail bru/i, (res) -> res.send mail.bxf
+  robot.hear /mail de bru/i, (res) -> res.send mail.bxf
+  robot.hear /mail du bxf/i, (res) -> res.send mail.bxf
+  robot.hear /mail de bxf/i, (res) -> res.send mail.bxf
   robot.hear /mail admin/i, (res) -> res.send mail.admin
   robot.hear /mail de admin/i, (res) -> res.send mail.admin
   robot.hear /mail d'admin/i, (res) -> res.send mail.admin
