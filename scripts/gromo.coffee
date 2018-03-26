@@ -27,7 +27,7 @@ h.kahya@bruxellesformation.brussels
   opendoores = "Où est ton badge ?"
   robot.hear /m'ouvrir la porte/i, (res) -> res.send opendoores
 
-  robot.hear /sens de la vie/i, (res) -> res.send "La réponse est Axel Fiolle"
+  robot.hear /sens de la vie/i, (res) -> res.send "La réponse est retourne travailler !"
 
   robot.hear /caca/i, (res) -> res.send res.random gromores
   robot.hear /putain/i, (res) -> res.send res.random gromores
