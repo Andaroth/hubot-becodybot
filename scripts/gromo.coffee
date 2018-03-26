@@ -24,27 +24,27 @@ h.kahya@bruxellesformation.brussels
 "
   meteores = "open link to https://www.google.be/search?newwindow=1&ei=_fa4Wu3GINO4jAOJuZDoAQ&q=weather+forecast+near+you&oq=weather+forecast+near+you"
 
-  robot.hear /putain/i, (res) -> res.random gromores
+  robot.hear /putain/i, (res) -> res.send res.random gromores
   robot.hear /putin/i, (res) -> res.send "Était-ce une vulgarité ou juste le nom du président de Russie ?"
-  robot.hear /merd/i, (res) -> res.random gromores
-  robot.hear /chier/i, (res) -> res.random gromores
-  robot.hear /con/, (res) -> res.random gromores
-  robot.hear /conne/, (res) -> res.random gromores
-  robot.hear /bordel/i, (res) -> res.random gromores
-  robot.hear /connard/i, (res) -> res.random gromores
-  robot.hear /enfoiré/i, (res) -> res.random gromores
-  robot.hear /fuck/i, (res) -> res.random gromores
-  robot.hear /shit/i, (res) -> res.random gromores
-  robot.hear /bastard/i, (res) -> res.random gromores
-  robot.hear /encul/i, (res) -> res.random gromores
-  robot.hear /bitch/i, (res) -> res.random gromores
-  robot.hear /pute/i, (res) -> res.random gromores
-  robot.hear /bâtar/i, (res) -> res.random gromores
-  robot.hear /batar/i, (res) -> res.random gromores
+  robot.hear /merd/i, (res) -> res.send res.random gromores
+  robot.hear /chier/i, (res) -> res.send res.random gromores
+  robot.hear /con/, (res) -> res.send res.random gromores
+  robot.hear /conne/, (res) -> res.send res.random gromores
+  robot.hear /bordel/i, (res) -> res.send res.random gromores
+  robot.hear /connard/i, (res) -> res.send res.random gromores
+  robot.hear /enfoiré/i, (res) -> res.send res.random gromores
+  robot.hear /fuck/i, (res) -> res.send res.random gromores
+  robot.hear /shit/i, (res) -> res.send res.random gromores
+  robot.hear /bastard/i, (res) -> res.send res.random gromores
+  robot.hear /encul/i, (res) -> res.send res.random gromores
+  robot.hear /bitch/i, (res) -> res.send res.random gromores
+  robot.hear /pute/i, (res) -> res.send res.random gromores
+  robot.hear /bâtar/i, (res) -> res.send res.random gromores
+  robot.hear /batar/i, (res) -> res.send res.random gromores
 
-  robot.hear /ta gueule/i, (res) -> res.random gromores
-  robot.hear /taggle/i, (res) -> res.random gromores
-  robot.hear /fils de/i, (res) -> res.random gromores
+  robot.hear /ta gueule/i, (res) -> res.send res.random gromores
+  robot.hear /taggle/i, (res) -> res.send res.random gromores
+  robot.hear /fils de/i, (res) -> res.send res.random gromores
   
   # late
   robot.hear /en retar/i, (res) -> res.send retares
