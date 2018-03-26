@@ -56,11 +56,11 @@ module.exports = (robot) ->
     "badge":[
       "claim":"https://inside.becode.org/badges/"
     ], # badge end
-    "repo":[
+    "repo":{
       "becode":"https://github.com/becodeorg/",
       "veille":"https://github.com/becodeorg/la-veille",
       "axel":"https://github.com/Andaroth/?tab=repositories"
-    ], # repo end
+    }, # repo end
     "mail":{
       "admin":"admin@becode.org",
       "alex":"alexandre@becode.org",
@@ -152,6 +152,7 @@ h.kahya@bruxellesformation.brussels
   #badges
   robot.hear /badge claim/i, (res) -> res.send output.mail.claim
   #other
+  robot.hear /wifi/, (res) -> res.send output.wifi
   robot.hear /spotify/, (res) -> res.send output.spotify
   robot.hear /joke/, (res) -> res.send res.random output.joke
   robot.hear /blague/, (res) -> res.send res.random output.joke
