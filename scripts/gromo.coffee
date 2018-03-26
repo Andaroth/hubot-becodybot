@@ -76,6 +76,7 @@ h.kahya@bruxellesformation.brussels
 "
     }, # mail end
     #other 
+    "gitpush":"It’s time to push! `git add . && git commit -m “ton message de commit” && git push`",
     "wifi":"The WiFi password for BC_HUB is `InCodeWeTrust!`",
     "retar":"Si tu es en retard, n'oublie pas de prévenir par mail admin@becode.org ainsi que tes deux formateurs",
     "late":"If you are late, don’t forget to warn admin@becode.org and your 2 coaches by email.",
