@@ -10,7 +10,7 @@
 
 module.exports = (robot) ->
 
-  gromores = "Hubot est très triste de t'entendre parler comme ça pertit sacrichenapan !"
+  gromores = "Hubot est très triste de t'entendre parler comme ça petit sacrichenapan !"
 
   robot.hear /putain/i, (res) -> res.send gromores
   robot.hear /merde/i, (res) -> res.send gromores
