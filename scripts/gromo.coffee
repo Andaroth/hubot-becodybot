@@ -48,11 +48,8 @@ h.kahya@bruxellesformation.brussels
     "juan":"juan@becode.org",
     "cedric":"cedric@becode.org"
   }
-  robot.hear /mail bxf/i, (res) -> res.send mail.bxf
-  robot.hear /mail bru/i, (res) -> res.send mail.bxf
-  robot.hear /mail de bru/i, (res) -> res.send mail.bxf
-  robot.hear /mail du bxf/i, (res) -> res.send mail.bxf
-  robot.hear /mail de bxf/i, (res) -> res.send mail.bxf
+  robot.hear /mail bru/i, (res) -> res.send bruforma
+  robot.hear /mail de bru/i, (res) -> res.send bruforma
   robot.hear /mail admin/i, (res) -> res.send mail.admin
   robot.hear /mail de admin/i, (res) -> res.send mail.admin
   robot.hear /mail d'admin/i, (res) -> res.send mail.admin
