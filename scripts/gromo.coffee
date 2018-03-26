@@ -10,6 +10,22 @@
 
 module.exports = (robot) ->
 
+  gromo = [
+    'putain',
+    'merde',
+    'chier',
+    'con',
+    'bordel'
+  ]
+  
+  robot.hear gromo, (res) -> 
+    res.reply "Ne sois pas si vulgaire petit sacrichenapan !"
+
+  robot.hear /!test/i, (res) ->
+    res.reply "[test]Ne sois pas si vulgaire petit sacrichenapan !"
+
+  
+
   # robot.hear /badger/i, (res) ->
   #   res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
   #
