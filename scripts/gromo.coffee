@@ -1,13 +1,26 @@
+# Comment c'est sensé fonctionner :
+#
+# robot.hear "string" 
+# sert à écouter si un utilisateur vient à dire un texte contenant "string"
+# 
+# res.send (res.random)
+# callback de robot.hear qui va faire parler le bot
+
 module.exports = (robot) ->
-  # get file
+  # ============= importer le json
   table = require "../table.json"
 
-  # functions
+  # ============= fonctions
   # gromo
   for i of table.multiple.gromo.in
     robot.hear table.multiple.gromo.in[i], (res) -> res.send res.random table.multiple.gromo.out
 
-  #mailist
+  # ============= mailist
+  # for i of table.relative.mail
+  #   robot.hear "mail "+i, (res) -> res.send table.relative.mail[i]
+  ## issue : les deux lignes ci-dessus renvoient toutes le mail de bxf
+
+  ## il faut faire des boucles au lieu de taper chaque entrée : 
   robot.hear /mail bru/i, (res) -> res.send table.relative.mail.bxf
   robot.hear /mail de bru/i, (res) -> res.send table.relative.mail.bxf
   robot.hear /mail admin/i, (res) -> res.send table.relative.mail.admin
