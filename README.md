@@ -41,6 +41,7 @@ port = 5556 # le port par lequel vous voulez faire passer le bot
 HUBOT_RYVER_APP_URL = votresalon.ryver.com # l'adresse d'accès au salon Ryver
 HUBOT_RYVER_USERNAME = root # username pour accéder au salon
 HUBOT_RYVER_PASSWORD = pwd # password pour accéder au salon
+# note : L'utilisateur choisi doit avoir des droits admins pour utiliser l'API correctement
 
 HUBOT_RYVER_JOIN_FORUMS = no # Le bot peut-il rejoindre automatiquement tous les salons trouvés ? 
 HUBOT_LOG_LEVEL = debug # niveau de verbosité des log
