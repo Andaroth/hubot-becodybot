@@ -77,8 +77,10 @@ module.exports = (robot) ->
         "axel":"https://github.com/Andaroth/?tab=repositories"
       }, # repo end
     }, # relative end
+    "social":{
+      "uwelcome":"Avec plaisir ! ;)",
+    },
     "simple":{
-      "uwelcome":"Avec plaisir :wink:",
       "wifi":"The WiFi password for BC_HUB is `InCodeWeTrust!`",
       "retar":"Si tu es en retard, n'oublie pas de prévenir par mail admin@becode.org ainsi que tes deux formateurs",
       "en retar":"Si tu es en retard, n'oublie pas de prévenir par mail admin@becode.org ainsi que tes deux formateurs",
@@ -158,7 +160,7 @@ module.exports = (robot) ->
   robot.hear /mail cédric/i, (res) -> res.send table.relative.mail.cedric
   robot.hear /mail de cédric/i, (res) -> res.send table.relative.mail.cedric
   #social
-  robot.hear /Merci Hubot/i, (res) -> res.send res.random table.simple.uwelcome
+  robot.hear /Merci Hubot/i, (res) -> res.send res.random table.social.uwelcome
   # late
   robot.hear /en retar/i, (res) -> res.send table.simple.retar
   robot.hear /mon retar/i, (res) -> res.send table.simple.retar
