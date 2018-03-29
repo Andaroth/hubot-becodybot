@@ -19,8 +19,8 @@ Le bot est conçu dans le but de réguler et modérer le chat dans certains salo
 
 ## Objectif
 - Relier l'API de Ryver avec ce bot afin de pouvoir
-- - Gérer les messages
-- - Gérer les utilisateurs
+ - Gérer les messages
+ - Gérer les utilisateurs
 
 ## Installation & environnement
 
