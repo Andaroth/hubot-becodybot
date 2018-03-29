@@ -25,7 +25,7 @@ Le bot est conçu dans le but de réguler et modérer le chat dans certains salo
 ## Installation & environnement
 
 Vous devez forker ce dépot à l'endroit de votre choix.
-Configurez les variables d'environnement comme indiqué plus bas puis exécutez la commande suivante à la racine du dossier git :
+Configurez les variables d'environnement comme indiqué plus bas puis exécutez les commandes suivantes à la racine du dossier git :
 
 ```
 ./bin/hubot
@@ -42,7 +42,8 @@ HUBOT_RYVER_APP_URL = votresalon.ryver.com # l'adresse d'accès au salon Ryver
 HUBOT_RYVER_USERNAME = root # username pour accéder au salon
 HUBOT_RYVER_PASSWORD = pwd # password pour accéder au salon
 
-HUBOT_RYVER_JOIN_FORUMS = no # Le bot peut-il rejoindre automatiquement tous les salons trouvés ? HUBOT_LOG_LEVEL = debug # niveau de verbosité des log
+HUBOT_RYVER_JOIN_FORUMS = no # Le bot peut-il rejoindre automatiquement tous les salons trouvés ? 
+HUBOT_LOG_LEVEL = debug # niveau de verbosité des log
 HUBOT_REDIS_BRAIN = localhost:6379 # Adresse de l'hôte Redis (facultatif je crois)
 ```
 
