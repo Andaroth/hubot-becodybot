@@ -106,19 +106,12 @@ module.exports = (robot) ->
   # takes a string and then return the robot.hear function
   # resSend = (usersay,robosay) -> robot.hear "/"+usersay+"/i", (res) -> res.send robosay
   # resRandom = (usersay,robosay) -> robot.hear "/"+usersay+"/i", (res) -> res.send res.random robosay
-
+  # gromoRes = (res) -> res.send res.random table.multiple.gromo.out
+  # gromoHear = (usersay) -> robot.hear usersay, gromoRes
   # gromo
-  gromoRes = (res) -> res.send res.random table.multiple.gromo.out
-  gromoHear = (usersay) -> robot.hear usersay, gromoRes
+  gromoList = table.multiple.gromo.in;
   # for each entry in gromoList, do hear gromoList[i] and random gromoOut
-  gromoHear table.multiple.gromo.in[i] for i in table.multiple.gromo.in
-  
-  # gromoFun = (i, res)
-  # avert = (res) -> res.send res.random table.multiple.gromo.out
-  # avert gromo for gromo in table.gromo.in
-
-  # gromos = mapMe.map (gromo) -> table.gromo.in; console.log(gromos)
-  # robot.hear gromos, (res) -> res.send res.random.gromo.out
+  (robot.hear gromoList[index], (res) -> res.send res.random table.multiple.gromo.out) for index in gromoList
 
   # robot.hear /mange tes morts/i, (res) -> res.send res.random table.multiple.gromo.out
   # robot.hear /caca/i, (res) -> res.send res.random table.multiple.gromo.out
