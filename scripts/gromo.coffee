@@ -88,7 +88,7 @@ module.exports = (robot) ->
       "m late":"If you are late, don’t forget to warn admin@becode.org and your 2 coaches by email.",
       "l be late":"If you are late, don’t forget to warn admin@becode.org and your 2 coaches by email.",
       "meteo":"https://www.google.be/search?newwindow=1&ei=_fa4Wu3GINO4jAOJuZDoAQ&q=weather+forecast+near+you&oq=weather+forecast+near+you",
-      "spotify":"https://open.spotify.com/user/1112523762/playlist/2QJt6MnyK1AHK0H2kzfioO?si=hkyqdQ6gRe-C7-93E2cVTg"
+      "spotify":"https://open.spotify.com/user/1112523762/playlist/2QJt6MnyK1AHK0H2kzfioO?si=hkyqdQ6gRe-C7-93E2cVTg",
       "putin":"Était-ce une vulgarité ou juste le nom du président de Russie ?",
       "kikoo":"Tu dis encore Kikoo à ton âge toi ?",
       "help":"Bonjour, je suis l'aide. Vous vous sentez mieux maintenant ?",
@@ -104,31 +104,9 @@ module.exports = (robot) ->
 # functions
 
   # gromo
-  # for each entry in gromoList, do hear gromoList[i] and random gromoOut
-  # (robot.hear "/"+table.multiple.gromo.in[index]+"/i", (res) -> res.send res.random table.multiple.gromo.out) for index in table.multiple.gromo.in
+  for i of table.multiple.gromo.in
+    robot.hear table.multiple.gromo.in[i], (res) -> res.send res.random table.multiple.gromo.out
 
-  robot.hear /mange tes morts/i, (res) -> res.send res.random table.multiple.gromo.out
-  robot.hear /caca/i, (res) -> res.send res.random table.multiple.gromo.out
-  robot.hear /pipi/i, (res) -> res.send res.random table.multiple.gromo.out
-  robot.hear /putain/i, (res) -> res.send res.random table.multiple.gromo.out
-  robot.hear /merd/i, (res) -> res.send res.random table.multiple.gromo.out
-  robot.hear /chier/i, (res) -> res.send res.random table.multiple.gromo.out
-  robot.hear /con/i, (res) -> res.send res.random table.multiple.gromo.out
-  robot.hear /conne/i, (res) -> res.send res.random table.multiple.gromo.out
-  robot.hear /bordel/i, (res) -> res.send res.random table.multiple.gromo.out
-  robot.hear /connard/i, (res) -> res.send res.random table.multiple.gromo.out
-  robot.hear /enfoiré/i, (res) -> res.send res.random table.multiple.gromo.out
-  robot.hear /fuck/i, (res) -> res.send res.random table.multiple.gromo.out
-  robot.hear /shit/i, (res) -> res.send res.random table.multiple.gromo.out
-  robot.hear /bastard/i, (res) -> res.send res.random table.multiple.gromo.out
-  robot.hear /encul/i, (res) -> res.send res.random table.multiple.gromo.out
-  robot.hear /bitch/i, (res) -> res.send res.random table.multiple.gromo.out
-  robot.hear /pute/i, (res) -> res.send res.random table.multiple.gromo.out
-  robot.hear /bâtar/i, (res) -> res.send res.random table.multiple.gromo.out
-  robot.hear /batar/i, (res) -> res.send res.random table.multiple.gromo.out
-  robot.hear /ta gueule/i, (res) -> res.send res.random table.multiple.gromo.out
-  robot.hear /taggle/i, (res) -> res.send res.random table.multiple.gromo.out
-  robot.hear /fils de/i, (res) -> res.send res.random table.multiple.gromo.out
   #mailist
   robot.hear /mail bru/i, (res) -> res.send table.relative.mail.bxf
   robot.hear /mail de bru/i, (res) -> res.send table.relative.mail.bxf
@@ -178,8 +156,8 @@ module.exports = (robot) ->
   #other
   robot.hear /wifi/, (res) -> res.send table.simple.wifi
   robot.hear /spotify/, (res) -> res.send table.simple.spotify
-  robot.hear /joke/, (res) -> res.send res.random table.simple.joke.out
-  robot.hear /blague/, (res) -> res.send res.random table.simple.joke.out
+  robot.hear /joke/, (res) -> res.send res.random table.multiple.joke.out
+  robot.hear /blague/, (res) -> res.send res.random table.multiple.joke.out
   robot.hear /meteo/i, (res) -> res.send table.simple.meteo
   robot.hear /météo/i, (res) -> res.send table.simple.meteo
   robot.hear /quel temps fait/i, (res) -> res.send table.simple.meteo
