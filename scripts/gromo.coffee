@@ -96,6 +96,7 @@ module.exports = (robot) ->
       "bot test":"Axel Fiolle dit : On m'a demandé de faire un bot qui dit erreur... et ça marche !!"
     }, #simple end
     "botsay":{
+      "daddy":"Mon créateur est Axel Fiolle (https://axelfiolle.be/)",
       "gitpush":"It’s time to push! `git add . && git commit -m “ton message de commit” && git push`",
       "motd":"Bienvenue"
     }
@@ -168,4 +169,10 @@ module.exports = (robot) ->
   robot.hear /kikoo/i, (res) -> res.send "Tu dis encore Kikoo à ton âge toi ?"
   robot.hear /help/i, (res) -> res.send "Bonjour, je suis l'aide. Vous vous sentez mieux maintenant ?"
   robot.hear /@hubot/i, (res) -> res.send "PM only"
+  robot.hear /qui est ton père?/, (res) -> res.send table.botsay.daddy
+  robot.hear /who's your daddy/, (res) -> res.send table.botsay.daddy
+  robot.hear /whos your daddy/, (res) -> res.send table.botsay.daddy
+  robot.hear /qui t'as créé ?/, (res) -> res.send table.botsay.daddy
+  robot.hear /créé hubot ?/, (res) -> res.send table.botsay.daddy
+  robot.hear /codé hubot?/, (res) -> res.send table.botsay.daddy
   robot.hear /bot test/i, (res) -> res.send "Axel Fiolle dit : On m'a demandé de faire un bot qui dit erreur... et ça marche !!"
