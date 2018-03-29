@@ -52,4 +52,4 @@ Si vous ne savez pas comment faire, vous pouvez décommenter et configurer les l
 
 
 ## Notes
-Les scripts sont écrits en coffeeScript, bon courage. 
+Les scripts sont écrits en coffeeScript et se trouvent dans `/scripts`, seul `gromo.coffee` est actif, bon courage. 
