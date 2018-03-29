@@ -106,9 +106,9 @@ module.exports = (robot) ->
   gromoList = table.multiple.gromo.in;
   gromoOut = table.multiple.gromo.out
   # takes a string and the return the robot.hear function
-  gromoRend = (usersay,robosay) -> robot.hear /#{usersay}/i, (res) -> res.send res.random gromoOut
+  gromoRend = (usersay,robosay) -> robot.hear usersay, (res) -> res.send res.random gromoOut
   # for each entry in gromoList, do gromoRend from gromoOut
-  gromoRend gromoList,gromoOut for i in gromoList
+  gromoRend gromoList[i],gromoOut for i in gromoList
 
   
   # gromoFun = (i, res)
