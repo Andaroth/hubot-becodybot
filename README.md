@@ -46,7 +46,7 @@ HUBOT_RYVER_JOIN_FORUMS = no # Le bot peut-il rejoindre automatiquement tous les
 HUBOT_REDIS_BRAIN = localhost:6379 # Adresse de l'hôte Redis (facultatif je crois)
 ```
 
-Si vous ne savez pas comment faire, vous pouvez vous inspirer du code commenté dans le fichier exécutable `./bin/hubot`. 
+Si vous ne savez pas comment faire, vous pouvez décommenter et configurer les lignes 8 à 15 de `./bin/hubot`. 
 
 
 ## Notes
