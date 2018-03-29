@@ -78,6 +78,7 @@ module.exports = (robot) ->
       }, # repo end
     }, # relative end
     "simple":{
+      "uwelcome":"Avec plaisir :wink:",
       "wifi":"The WiFi password for BC_HUB is `InCodeWeTrust!`",
       "retar":"Si tu es en retard, n'oublie pas de prévenir par mail admin@becode.org ainsi que tes deux formateurs",
       "en retar":"Si tu es en retard, n'oublie pas de prévenir par mail admin@becode.org ainsi que tes deux formateurs",
