@@ -160,7 +160,7 @@ module.exports = (robot) ->
   robot.hear /mail cédric/i, (res) -> res.send table.relative.mail.cedric
   robot.hear /mail de cédric/i, (res) -> res.send table.relative.mail.cedric
   #social
-  robot.hear /Merci Hubot/i, (res) -> res.send res.random table.social.uwelcome
+  robot.hear /Merci Hubot/i, (res) -> res.send table.social.uwelcome
   # late
   robot.hear /en retar/i, (res) -> res.send table.simple.retar
   robot.hear /mon retar/i, (res) -> res.send table.simple.retar
