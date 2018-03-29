@@ -103,38 +103,32 @@ module.exports = (robot) ->
 
 # functions
 
-  # takes a string and then return the robot.hear function
-  # resSend = (usersay,robosay) -> robot.hear "/"+usersay+"/i", (res) -> res.send robosay
-  # resRandom = (usersay,robosay) -> robot.hear "/"+usersay+"/i", (res) -> res.send res.random robosay
-  # gromoRes = (res) -> res.send res.random table.multiple.gromo.out
-  # gromoHear = (usersay) -> robot.hear usersay, gromoRes
   # gromo
-  gromoList = table.multiple.gromo.in;
   # for each entry in gromoList, do hear gromoList[i] and random gromoOut
-  (robot.hear gromoList[index], (res) -> res.send res.random table.multiple.gromo.out) for index in gromoList
+  # (robot.hear "/"+table.multiple.gromo.in[index]+"/i", (res) -> res.send res.random table.multiple.gromo.out) for index in table.multiple.gromo.in
 
-  # robot.hear /mange tes morts/i, (res) -> res.send res.random table.multiple.gromo.out
-  # robot.hear /caca/i, (res) -> res.send res.random table.multiple.gromo.out
-  # robot.hear /pipi/i, (res) -> res.send res.random table.multiple.gromo.out
-  # robot.hear /putain/i, (res) -> res.send res.random table.multiple.gromo.out
-  # robot.hear /merd/i, (res) -> res.send res.random table.multiple.gromo.out
-  # robot.hear /chier/i, (res) -> res.send res.random table.multiple.gromo.out
-  # robot.hear /con/i, (res) -> res.send res.random table.multiple.gromo.out
-  # robot.hear /conne/i, (res) -> res.send res.random table.multiple.gromo.out
-  # robot.hear /bordel/i, (res) -> res.send res.random table.multiple.gromo.out
-  # robot.hear /connard/i, (res) -> res.send res.random table.multiple.gromo.out
-  # robot.hear /enfoiré/i, (res) -> res.send res.random table.multiple.gromo.out
-  # robot.hear /fuck/i, (res) -> res.send res.random table.multiple.gromo.out
-  # robot.hear /shit/i, (res) -> res.send res.random table.multiple.gromo.out
-  # robot.hear /bastard/i, (res) -> res.send res.random table.multiple.gromo.out
-  # robot.hear /encul/i, (res) -> res.send res.random table.multiple.gromo.out
-  # robot.hear /bitch/i, (res) -> res.send res.random table.multiple.gromo.out
-  # robot.hear /pute/i, (res) -> res.send res.random table.multiple.gromo.out
-  # robot.hear /bâtar/i, (res) -> res.send res.random table.multiple.gromo.out
-  # robot.hear /batar/i, (res) -> res.send res.random table.multiple.gromo.out
-  # robot.hear /ta gueule/i, (res) -> res.send res.random table.multiple.gromo.out
-  # robot.hear /taggle/i, (res) -> res.send res.random table.multiple.gromo.out
-  # robot.hear /fils de/i, (res) -> res.send res.random table.multiple.gromo.out
+  robot.hear /mange tes morts/i, (res) -> res.send res.random table.multiple.gromo.out
+  robot.hear /caca/i, (res) -> res.send res.random table.multiple.gromo.out
+  robot.hear /pipi/i, (res) -> res.send res.random table.multiple.gromo.out
+  robot.hear /putain/i, (res) -> res.send res.random table.multiple.gromo.out
+  robot.hear /merd/i, (res) -> res.send res.random table.multiple.gromo.out
+  robot.hear /chier/i, (res) -> res.send res.random table.multiple.gromo.out
+  robot.hear /con/i, (res) -> res.send res.random table.multiple.gromo.out
+  robot.hear /conne/i, (res) -> res.send res.random table.multiple.gromo.out
+  robot.hear /bordel/i, (res) -> res.send res.random table.multiple.gromo.out
+  robot.hear /connard/i, (res) -> res.send res.random table.multiple.gromo.out
+  robot.hear /enfoiré/i, (res) -> res.send res.random table.multiple.gromo.out
+  robot.hear /fuck/i, (res) -> res.send res.random table.multiple.gromo.out
+  robot.hear /shit/i, (res) -> res.send res.random table.multiple.gromo.out
+  robot.hear /bastard/i, (res) -> res.send res.random table.multiple.gromo.out
+  robot.hear /encul/i, (res) -> res.send res.random table.multiple.gromo.out
+  robot.hear /bitch/i, (res) -> res.send res.random table.multiple.gromo.out
+  robot.hear /pute/i, (res) -> res.send res.random table.multiple.gromo.out
+  robot.hear /bâtar/i, (res) -> res.send res.random table.multiple.gromo.out
+  robot.hear /batar/i, (res) -> res.send res.random table.multiple.gromo.out
+  robot.hear /ta gueule/i, (res) -> res.send res.random table.multiple.gromo.out
+  robot.hear /taggle/i, (res) -> res.send res.random table.multiple.gromo.out
+  robot.hear /fils de/i, (res) -> res.send res.random table.multiple.gromo.out
   #mailist
   robot.hear /mail bru/i, (res) -> res.send table.relative.mail.bxf
   robot.hear /mail de bru/i, (res) -> res.send table.relative.mail.bxf
