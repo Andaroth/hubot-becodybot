@@ -104,14 +104,14 @@ module.exports = (robot) ->
 # functions
 
   # takes a string and then return the robot.hear function
-  resSend = (usersay,robosay) -> robot.hear "/"+usersay+"/i", (res) -> res.send robosay
-  resRandom = (usersay,robosay) -> robot.hear "/"+usersay+"/i", (res) -> res.send res.random robosay
-
+  # resSend = (usersay,robosay) -> robot.hear "/"+usersay+"/i", (res) -> res.send robosay
+  # resRandom = (usersay,robosay) -> robot.hear "/"+usersay+"/i", (res) -> res.send res.random robosay
+  gromoRes = (usersay) -> robot.hear usersay, (res) -> res.send res.random table.multiple.gromo.out
   # gromo
   gromoList = table.multiple.gromo.in;
   gromoOut = table.multiple.gromo.out
   # for each entry in gromoList, do hear gromoList[i] and random gromoOut
-  resRandom gromoList[i],gromoOut for i in gromoList
+  gromoRes gromoList[i] for i in gromoList
   
   # gromoFun = (i, res)
   # avert = (res) -> res.send res.random table.multiple.gromo.out
