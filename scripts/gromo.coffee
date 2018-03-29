@@ -179,14 +179,14 @@ module.exports = (robot) ->
   robot.hear /badge claim/i, (res) -> res.send table.relative.mail.claim
   #other
   robot.hear /wifi/, (res) -> res.send table.simple.wifi
-  robot.hear /spotify/, (res) -> res.send table.spotify
+  robot.hear /spotify/, (res) -> res.send table.simple.spotify
   robot.hear /joke/, (res) -> res.send res.random table.simple.joke.out
   robot.hear /blague/, (res) -> res.send res.random table.simple.joke.out
   robot.hear /meteo/i, (res) -> res.send table.simple.meteo
   robot.hear /météo/i, (res) -> res.send table.simple.meteo
   robot.hear /quel temps fait/i, (res) -> res.send table.simple.meteo
   robot.hear /m'ouvrir la porte/i, (res) -> res.send "Où est ton badge ?"
-  robot.hear /Steve m'a-t-il aidé ?/i, (res) -> res.send "Steve est un lâcheur"
+  # robot.hear /Steve m'a-t-il aidé ?/i, (res) -> res.send "Steve est un lâcheur"
   robot.hear /sens de la vie/i, (res) -> res.send "La réponse est retourne travailler !"
   robot.hear /putin/i, (res) -> res.send "Était-ce une vulgarité ou juste le nom du président de Russie ?"
   robot.hear /kikoo/i, (res) -> res.send "Tu dis encore Kikoo à ton âge toi ?"
